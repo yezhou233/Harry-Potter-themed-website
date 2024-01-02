@@ -1,0 +1,233 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 字体 */
+@font-face {
+    font-family: 'yixing';
+    src: url('../font/壹星.ttf');
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.15);
+    cursor: url('../image/hover.cur'), auto;
+}
+
+body::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.15);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* 信息块 */
+.message {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    top: 7px;
+    display: flex;
+    align-items: center;
+
+}
+
+/* 头像信息 */
+#avatar-message {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    position: absolute;
+    right: 30px;
+
+}
+
+#avatar-message:hover {
+    animation: jumpBoxHandler 1.5s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+    /* css事件 */
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 5px);
+        /* 可配置跳动方向 */
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* 学院信息 */
+#academy-message {
+    width: 100px;
+    font-family: 'yixing';
+    color: rgb(196, 196, 196);
+    font-size: 16px;
+    position: absolute;
+    right: 100px;
+    top: 23px;
+    text-align: right;
+}
+
+/* 名字信息 */
+#name-message {
+    width: 100px;
+    font-family: 'yixing';
+    color: rgb(196, 196, 196);
+    font-size: 12px;
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    text-align: right;
+}
+
+/* 播放器 */
+#player {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -40%);
+    cursor: auto;
+    width: 56%;
+    height: 56%;
+}
+
+#mui-player {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: auto;
+}
+
+/* 情节 */
+#plot {
+    font-family: 'yixing';
+    font-size: 17px;
+    color: rgb(222, 222, 222);
+    width: 1000px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 1000px;
+    transform: translate(-50%, 0);
+    background-color: rgba(46, 46, 46, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    line-height: 30px;
+}
+
+/* 情节按钮 */
+#plotbtn {
+    position: fixed;
+    bottom: 60px;
+    right: 40px;
+    height: 70px;
+    line-height: 50px;
+    cursor: url('../image/hover4.cur'), auto;
+    transition: all 0.5s;
+}
+
+#btnhint {
+    width: 63px;
+    text-align: center;
+    position: fixed;
+    bottom: 35px;
+    right: 50px;
+    color: rgb(205, 205, 205);
+    font-family: 'yixing';
+    font-size: 15px;
+    display: none;
+    transition: all 1s;
+}
+
+#plotbtn:hover {
+    animation: jumpBoxHandler 1.5s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+    /* css事件 */
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 5px);
+        /* 可配置跳动方向 */
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+#plotbtn:hover+#btnhint {
+    display: block;
+}
+
+/* 列表块 */
+#list {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    cursor: auto;
+    width: 320px;
+    height: 550px;
+}
+
+/* 电影列表 */
+#movie-list {
+    position: absolute;
+    left: -270px;
+    width: 250px;
+    overflow: auto;
+}
+
+/* 右拉箭头 */
+#arrow {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translate(0, -50%);
+    cursor: url('../image/hover3.cur'), auto;
+}
+
+/* 电影选项 */
+.movie-name {
+    color: rgb(255, 204, 0);
+    text-decoration: none;
+    background-color: rgba(198, 198, 198, 0);
+    font-family: 'yixing';
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    padding-right: 10px;
+    border: 0.5px black solid;
+    margin-bottom: 8px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.movie-name:hover {
+    transition: all 0.5s;
+    background-color: rgb(179, 179, 179, 0.6);
+    color: white;
+    cursor: url('../image/hover3.cur'), auto;
+}

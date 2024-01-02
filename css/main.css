@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 字体 */
+@font-face {
+    font-family: 'yixing';
+    src: url('../font/壹星.ttf');
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    cursor: url("../image/hover.cur"), auto;
+}
+
+body::after {
+    content: "";
+    background: rgba(255, 255, 255, 0.3);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+/* 信息块 */
+.message {
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+}
+
+/* 头像信息 */
+#avatar-message {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    position: absolute;
+    right: 30px;
+
+}
+
+#avatar-message:hover {
+    animation: jumpBoxHandler 1.5s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+    /* css事件 */
+    0% {
+        transform: translate(0px, 0px);
+    }
+
+    50% {
+        transform: translate(0px, 5px);
+        /* 可配置跳动方向 */
+    }
+
+    100% {
+        transform: translate(0px, 0px);
+    }
+}
+
+/* 学院信息 */
+#academy-message {
+    width: 100px;
+    font-family: 'yixing';
+    color: rgb(110, 110, 110);
+    font-size: 16px;
+    position: absolute;
+    right: 100px;
+    top: 23px;
+    text-align: right;
+}
+
+/* 名字信息 */
+#name-message {
+    width: 100px;
+    font-family: 'yixing';
+    color: rgb(110, 110, 110);
+    font-size: 12px;
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    text-align: right;
+}
+
+#classed {
+    height: 70%;
+    width: 50%;
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+
+}
+
+#classed img {
+    max-width: 80%;
+}
+
+#classed-message {
+    position: absolute;
+    height: 50%;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 3%;
+    padding: 20px;
+    font-family: 'yixing';
+    font-size: 22px;
+    line-height: 20px;
+}
+
+#classed-message p {
+    margin-bottom: 20px;
+}
+
+.link {
+    display: flex;
+    height: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+    padding: 10px;
+}
+
+.link a {
+    margin: 20px 50px;
+    text-decoration: none;
+}
+
+.link a p {
+    color: black;
+    font-family: 'yixing';
+    text-align: center;
+    margin-top: 10px;
+    font-size: 20px;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🪄点击头像登录🪄</title>
+  <link rel="icon" href="../image/女巫帽万圣节.svg" type="image/x-icon">
+
+  <link rel="stylesheet" href="../css/index.css">
+</head>
+
+<body background="../image/index-background.jpg" ;>
+
+
+  <div id="body">
+
+    <div class="music">
+      <audio src="../music/Hedwig's Theme.mp3" id="music" loop="loop" preload="auto"></audio>
+      <img src="../image/唱片.svg" alt="播放/暂停" id="record">
+      <div id="hint">播放/暂停</div>
+    </div>
+
+    <div class="avatar">
+      <img src="../image/avatar-1.jpg" alt="" id="avatar" style="transition: none;">
+    </div>
+
+    <div id="login">
+
+      <div id="message-list">
+
+        <!-- 选择学院 -->
+        <div class="select-box">
+
+          <div class="academy-options-container">
+
+
+            <div class="academy-option" id="gryffindor">
+              <input type="radio" class="radio" name="category" />
+              <label for="gryffindor">格兰芬多</label>
+            </div>
+
+            <div class="academy-option" id="ravenclaw">
+              <input type="radio" class="radio" name="category" />
+              <label for="ravenclaw">拉文克劳</label>
+            </div>
+
+            <div class="academy-option" id="hufflepuff">
+              <input type="radio" class="radio" name="category" />
+              <label for="hufflepuff">赫奇帕奇</label>
+            </div>
+
+            <div class="academy-option" id="slytherin">
+              <input type="radio" class="radio" name="category" />
+              <label for="slytherin">斯莱特林</label>
+            </div>
+
+          </div>
+
+          <div class="academy-selected">
+            <img src="../image/magic-fill.svg" alt="一根魔法棒">
+            <p>选择一个学院</p>
+          </div>
+        </div>
+
+        <!-- 选择性别 -->
+        <div class="select-box">
+
+          <div class="gender-options-container">
+
+
+            <div class="gender-option" id="girl">
+              <input type="radio" class="radio" name="category" />
+              <label for="girl">女巫师</label>
+            </div>
+
+            <div class="gender-option" id="boy">
+              <input type="radio" class="radio" name="category" />
+              <label for="boy">男巫师</label>
+            </div>
+
+          </div>
+
+          <div class="gender-selected">
+            <img src="../image/magic-fill.svg" alt="一根魔法棒">
+            <p>你的性别</p>
+          </div>
+        </div>
+
+        <div class="select-box">
+          <input type="text" id="name" placeholder="输入一个名字">
+        </div>
+      </div>
+
+      <button id="loginbtn" type="button">log in</button>
+      <div id="error"></div>
+    </div>
+  </div>
+  </div>
+
+
+  <script src="../js/index.js"></script>
+</body>
+
+</html>

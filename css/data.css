@@ -1,0 +1,939 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 字体 */
+@font-face {
+  font-family: 'yixing';
+  src: url('../font/壹星.ttf');
+}
+
+html,
+body {
+  background-image: url(../image/Web-Header.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  cursor: url('../image/hover.cur'), auto;
+}
+
+/* 音乐播放盒子 */
+.music {
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  right: 2.2%;
+  top: 50%;
+  z-index: 1;
+}
+
+/* 唱片旋转动画 */
+#record {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+  max-width: 55px;
+  animation: move 0s linear infinite;
+}
+
+@keyframes move {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* #music {
+  display: none;
+} */
+
+#hint {
+  width: 80px;
+  font-family: "yixing";
+  font-size: 18px;
+  color: rgb(93, 93, 93);
+  transition: all 0.3s;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.music:hover #record {
+  animation: move 3s linear infinite;
+}
+
+.music:hover #hint {
+  display: block;
+}
+
+/* 信息块 */
+.message {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  top: 7px;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+/* 导航 */
+.navigation {
+  display: flex;
+  position: absolute;
+  left: 20px;
+
+
+
+}
+
+.navigation div,
+.navigation a {
+  font-family: 'yixing';
+  color: rgb(145, 145, 145);
+  font-size: 16px;
+  margin: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* 头像信息 */
+#avatar-message {
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  position: absolute;
+  right: 30px;
+
+}
+
+#avatar-message:hover {
+  animation: jumpBoxHandler 1.5s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+  /* css事件 */
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 5px);
+    /* 可配置跳动方向 */
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/* 学院信息 */
+#academy-message {
+  width: 100px;
+  font-family: 'yixing';
+  color: rgb(145, 145, 145);
+  font-size: 16px;
+  position: absolute;
+  right: 100px;
+  top: 23px;
+  text-align: right;
+}
+
+/* 名字信息 */
+#name-message {
+  width: 100px;
+  font-family: 'yixing';
+  color: rgb(145, 145, 145);
+  font-size: 12px;
+  position: absolute;
+  right: 100px;
+  bottom: 20px;
+  text-align: right;
+}
+
+/* 霍格沃兹信息 */
+.hogwarts {
+  position: relative;
+  /* top: 100px;
+  left: 50%;
+  transform: translateX(-50%); */
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+  background-image: url(../image/牛皮纸.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+#hogwarts-text1 {
+  position: absolute;
+  height: 30%;
+  max-width: 70%;
+  top: 10%;
+  left: 20px;
+  line-height: 30px;
+  font-family: 'yixing';
+  color: rgb(87, 87, 87);
+  border-radius: 12px;
+  background-color: rgba(213, 213, 213, 0.1);
+  padding: 20px;
+}
+
+#hogwarts-text2 {
+  position: absolute;
+  height: 50%;
+  max-width: 55%;
+  top: 38%;
+  left: 20px;
+  line-height: 30px;
+  font-family: 'yixing';
+  color: rgb(87, 87, 87);
+  border-radius: 12px;
+  background-color: rgba(213, 213, 213, 0.1);
+  padding: 20px;
+  z-index: 0;
+}
+
+#hogwarts-text1 p,
+#hogwarts-text2 p {
+  margin-bottom: 12px;
+}
+
+#hogwarts-castle {
+  position: absolute;
+  right: -130px;
+  bottom: -5px;
+  z-index: -1;
+}
+
+/* 时间轴 */
+.cd-container {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  background: rgba(43, 52, 58, 0);
+  padding: 0 10%;
+  border-radius: 2px;
+  position: relative;
+}
+
+.cd-container::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* -------------------------------- 
+
+Main components 
+
+-------------------------------- */
+#cd-timeline {
+  position: relative;
+  padding: 2em 0;
+  top: 10%;
+  margin-bottom: 2em;
+}
+
+#cd-timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 25px;
+  height: 100%;
+  width: 4px;
+  background: rgb(86, 74, 197);
+}
+
+@media only screen and (min-width: 1170px) {
+  #cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline-block {
+  position: relative;
+  margin: 2em 0;
+}
+
+.cd-timeline-block:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-block:first-child {
+  margin-top: 0;
+}
+
+.cd-timeline-block:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.cd-timeline-img {
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  /* box-shadow: 0 0 0 4px #7E57C2, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05); */
+}
+
+.cd-timeline-img {
+  /* background: #673AB7; */
+  background-image: url(../image/金色飞贼.png);
+  background-position-y: 70%;
+  background-position-x: 25%;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-img {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: 15px;
+  }
+}
+
+.cd-timeline-content {
+  font-family: '黑体';
+  position: relative;
+  margin-left: 60px;
+  margin-right: 30px;
+  background: rgba(51, 60, 66, 0.8);
+  border-radius: 2px;
+  padding: 1em;
+}
+
+.cd-timeline-content .timeline-content-info {
+  background: #2B343A;
+  padding: 5px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+}
+
+.cd-timeline-content .timeline-content-info i {
+  margin-right: 5px;
+}
+
+.cd-timeline-content .timeline-content-info .timeline-content-info-title,
+.cd-timeline-content .timeline-content-info .timeline-content-info-date {
+  width: calc(50% - 2px);
+  display: inline-block;
+}
+
+@media (max-width: 500px) {
+
+  .cd-timeline-content .timeline-content-info .timeline-content-info-title,
+  .cd-timeline-content .timeline-content-info .timeline-content-info-date {
+    display: block;
+    width: 100%;
+  }
+}
+
+.cd-timeline-content .content-skills {
+  font-size: 12px;
+  padding: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cd-timeline-content .content-skills li {
+  background: #40484D;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 2px 10px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 3px 2px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.cd-timeline-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline-content h2 {
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+
+.cd-timeline-content p,
+.cd-timeline-content {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+.cd-date {
+  font-family: 'yixing';
+  color: rgb(185, 165, 13);
+}
+
+.cd-timeline-content .cd-date {
+  display: inline-block;
+}
+
+.cd-timeline-content p {
+  margin: 1em 0;
+  line-height: 1.6;
+}
+
+.cd-timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #333C42;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline-content h2 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+
+  .cd-timeline-content p {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .cd-timeline-content .cd-read-more,
+  .cd-timeline-content {
+    font-size: 14px;
+    font-size: 0.875rem;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline-content {
+    color: white;
+    margin-left: 0;
+    padding: 1.6em;
+    width: 36%;
+    margin: 0 5%;
+  }
+
+  .cd-timeline-content::before {
+    top: 24px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #333C42;
+  }
+
+  .cd-timeline-content .cd-date {
+    position: absolute;
+    width: 100%;
+    left: 122%;
+    top: 40px;
+    font-size: 16px;
+    font-size: 1rem;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content {
+    float: right;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: #333C42;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
+    float: right;
+  }
+
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
+    left: auto;
+    right: 122%;
+    text-align: right;
+  }
+}
+
+/* 以上为时间轴 */
+
+/* 学院徽章列表 */
+
+.academy {
+  flex-direction: column;
+  position: relative;
+  margin: 10% 0;
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  font-family: 'yixing';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 40px;
+  color: rgb(139, 139, 139);
+  border-top: 3px rgb(183, 181, 181) solid;
+}
+
+.academy>div {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.academyimg {
+  text-align: center;
+  color: rgb(175, 175, 175);
+  font-family: 'yixing';
+  font-size: 20px;
+}
+
+#hufflepuff {
+  margin-right: -40px;
+}
+
+.academyimg img:hover {
+  animation: jumpBoxHandler 1s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+  /* css事件 */
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 8px);
+    /* 可配置跳动方向 */
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+
+/* 轮播图 */
+.banner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  width: 400%;
+  display: flex;
+  transition: transform 0.6s ease;
+}
+
+/* 轮播图圆点样式 */
+.control-container {
+  position: absolute;
+  bottom: 2.5%;
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 20%;
+  height: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 15px;
+  text-align: center;
+  cursor: auto;
+}
+
+.control-container a {
+  width: 18px;
+  height: 18px;
+  background: rgb(180, 179, 179);
+  position: absolute;
+  margin: 0 auto;
+  border-radius: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.control-container input {
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  bottom: 1rem;
+  margin: 0;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  opacity: 0;
+}
+
+/* 设置导航圆点偏移量（居中布局）*/
+#banner-control-1,
+#banner-control-1+.banner-nav-a {
+  left: 20%;
+}
+
+#banner-control-2,
+#banner-control-2+.banner-nav-a {
+  left: 40%;
+}
+
+#banner-control-3,
+#banner-control-3+.banner-nav-a {
+  left: 60%;
+}
+
+#banner-control-4,
+#banner-control-4+.banner-nav-a {
+  left: 80%;
+}
+
+/* 设置高亮 */
+/*当 input 被选中时 他的兄弟级a标签高亮展示*/
+input:checked+.banner-nav-a {
+  background-color: rgb(201, 162, 21);
+}
+
+/* 设置轮播图动画 */
+#banner-control-1:checked .container {
+  transform: translateX(0);
+}
+
+#banner-control-2:checked .container {
+  transform: translateX(-100%);
+}
+
+#banner-control-3:checked .container {
+  transform: translateX(-200%);
+}
+
+#banner-control-4:checked .container {
+  transform: translateX(-300%);
+}
+
+/* 格兰芬多信息 */
+#gryffindor-message,
+#ravenclaw-message,
+#hufflepuff-message,
+#slytherin-message {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* overflow: hidden; */
+  background-image: url(../image/牛皮纸.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+}
+
+#gryffindor-message img,
+#ravenclaw-message img,
+#hufflepuff-message img,
+#slytherin-message img {
+  position: absolute;
+  left: 5%;
+  height: 80%;
+  width: 33%;
+  top: 50%;
+  transform: translateY(-48%);
+}
+
+.text {
+  width: 700px;
+  height: 80%;
+  position: absolute;
+  right: 8%;
+  top: 10%;
+  font-family: 'yixing';
+  font-size: 18px;
+  line-height: 25px;
+  overflow: scroll;
+  overflow-x: hidden !important;
+}
+
+.text p {
+  margin-bottom: 10px;
+}
+
+/* 滚动条整体 */
+.text::-webkit-scrollbar {
+  height: 20px;
+  width: 10px;
+}
+
+/* 两个滚动条交接处 -- x轴和y轴 */
+.text::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 滚动条滑块 */
+.text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #535353;
+}
+
+/* 滚动条轨道 */
+.text::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
+}
+
+/* 科目 */
+#subject {
+  height: 180%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10%;
+}
+
+#describe {
+  font-family: 'yixing';
+  color: rgb(139, 139, 139);
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(60, 60, 60, 0.6);
+  padding: 25px;
+}
+
+#describe h2,
+#describe h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: rgb(169, 144, 5);
+}
+
+#describe p {
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+
+#subject-text {
+  height: 48%;
+  width: 80%;
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(26, 26, 26, 0.6);
+  padding: 30px 20px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  overflow-x: hidden !important;
+}
+
+#subject-text div div {
+  position: relative;
+}
+
+.textcontent {
+  background-color: rgba(164, 164, 164, 0.2);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 130px;
+}
+
+.textcontent h2 {
+  font-family: 'yixing';
+  padding-bottom: 10px;
+  color: rgb(151, 141, 141);
+  width: 30%
+}
+
+.textcontent p {
+  font-family: '黑体';
+  color: rgb(168, 168, 168);
+  width: 75%;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.subjectimg {
+  position: absolute;
+  left: 77%;
+  top: 0;
+  max-width: 20%;
+  max-height: 97%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+/* 滚动条整体 */
+#subject-text::-webkit-scrollbar {
+  height: 20px;
+  width: 10px;
+}
+
+/* 两个滚动条交接处 -- x轴和y轴 */
+#subject-text::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+/* 滚动条滑块 */
+#subject-text::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  background: #535353;
+}
+
+/* 滚动条轨道 */
+#subject-text::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background: #ededed;
+}
+
+
+.grade {
+  height: 120%;
+  width: 100%;
+  position: relative;
+}
+
+.grade-content {
+  height: 38%;
+  width: 52%;
+  background-color: rgba(164, 164, 164, 0.5);
+  position: relative;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.grade-list {
+  position: absolute;
+  display: flex;
+  height: 12%;
+  width: 80%;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: black;
+  border-top: 2px black solid;
+  border-bottom: 2px black solid;
+
+}
+
+.grade-number {
+  margin: 15px;
+  font-family: 'yixing';
+  font-size: 20px;
+  cursor: pointer;
+  height: 40px;
+  width: 60px;
+  text-align: center;
+  line-height: 20px;
+}
+
+#one {
+  color: rgb(212, 212, 212);
+}
+
+#grade-text {
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: 80%;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  line-height: 25px;
+  font-family: 'yixing';
+  font-size: 20px;
+  color: rgb(194, 194, 194);
+}
+
+.admission {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  background-image: url("../image/牛皮纸.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.admission-content img {
+  position: absolute;
+  bottom: 0;
+  left: -9%;
+  /* width: 40%; */
+  min-height: 65%;
+}
+
+#admission-text {
+  position: absolute;
+  left: 48%;
+  top: 55%;
+  transform: translateY(-50%);
+  max-width: 43%;
+  font-family: 'yixing';
+  font-size: 18px;
+  color: rgb(98, 98, 98);
+  padding: 20px;
+}
+
+#admission-text p {
+  line-height: 20px;
+  margin-bottom: 15px;
+  background-color: rgba(175, 175, 175, 0.27);
+  border-radius: 12px;
+}

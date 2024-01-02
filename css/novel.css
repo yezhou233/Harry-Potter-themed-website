@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 字体 */
+@font-face {
+    font-family: 'yixing';
+    src: url('../font/壹星.ttf');
+}
+
+body {
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.botton_win {
+    position: fixed;
+    bottom: 0px;
+    left: 40%;
+}
+
+.botton_win>button {
+    width: auto;
+    height: 25px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#read {
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+#button {
+    width: 450px;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(10%, -50%);
+    display: flex;
+    flex-direction: column;
+}
+
+#button>button,
+#button>a {
+    width: 150px;
+    height: 50px;
+    color: black;
+    margin: 10px;
+    font-size: 18px;
+    border: 0.5px black solid;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0);
+    font-family: 'yixing';
+}
+
+#button>button:hover,
+#button>a:hover {
+    background-color: rgba(240, 240, 240, 0.3);
+}

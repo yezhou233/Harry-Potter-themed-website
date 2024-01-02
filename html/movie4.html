@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈利波特与火焰杯</title>
+    <link rel="icon" href="../image/女巫帽万圣节.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/movie.css">
+    <meta name="referrer" content="never">
+    <link rel="stylesheet" type="text/css" href="../css/mui-player.min.css" />
+    <script type="text/javascript" src="../js/mui-player.min.js"></script>
+
+<body>
+
+</body>
+
+</html>
+</head>
+
+<body background="../image/Hogwarts.png">
+
+    <div id="body">
+        <!-- 个人信息 -->
+        <div class="message">
+            <img src="" alt="这是一个头像" id="avatar-message">
+            <div id="academy-message"></div>
+            <div id="name-message"></div>
+        </div>
+
+        <!-- 播放器 -->
+        <div id="mui-player"></div>
+
+        <!-- 电影情节内容 -->
+        <div id="plot">
+            <p>哈利·波特在韦斯莱家度过了他暑假最后的一段日子，并去看魁地奇世界杯。一群食死徒在结束后突然出现，攻击一些麻瓜并放出了黑魔标记。这使巫师们非常惶恐。</p><br>
+
+            <p>回到学校之后，新的黑魔法防御术的教授是已经退休的傲罗疯眼汉穆迪，而很久未举办的三强争霸赛也会在霍格沃茨魔法学校重新举办。所有想参加的学生须将名字写在纸上投入火焰杯中，然后火焰杯将会遴选出三所学校（霍格沃茨、布斯巴顿和德姆斯特朗）的代表。哈利并没有报名，但是火焰杯浮出了哈利的名字，使他不得不参加。哈利怀疑自己被故意陷害，但罗恩·韦斯莱却认为哈利为了出风头，不相信哈利所说的，而与哈利冷战好几个星期。
+            </p><br>
+
+            <p>鲁伯·海格偷偷向哈利还有马克西姆夫人透露了三强争霸赛的第一个项目。</p><br>
+            <p>参赛者将试图避开一头龙的攻击，从龙的巢中拿到一个金蛋。卡卡洛夫（德姆斯特朗校长）也看见了龙，只剩下塞德里克·迪戈里——毫不知情。哈利认为这不公平，就将它告诉了迪戈里。哈利在穆迪的提示下，利用飞天扫帚成功地完成了第一个项目。这次比赛，让罗恩和赫敏·格兰杰意识到了比赛的危险，同时也让罗恩与哈利重修旧好。
+            </p><br>
+
+            <p>在圣诞舞会上，赫敏成为了威克多尔·克鲁姆的舞伴，而哈利一心想要邀请的秋·张却成了塞德里克的舞伴。 后来在塞德里克的提示，哈利从金蛋得知了第二个项目是在水中进行，并在家养小精灵多比的帮助下用鳃囊草通过了比赛。
+            </p><br>
+
+            <p>在三强争霸赛中的最后一个项目是迷宫，在走迷宫的同时还要避开危险，而奖杯就在终点的地方。哈利和塞德里克同时到达了终点，由于他们互相帮助过，他们决定同时拿起奖杯，但意外的是，奖杯却是一个门钥匙，将哈利和塞德里克带到了伏地魔父亲的坟墓。他们在那里遇见了伏地魔和小矮星彼得。彼得杀了塞德里克，然后用哈利的血、伏地魔父亲的骨头，还有他自己的身上的肉（他把少了一根手指的整只手切掉）作为原料，使伏地魔复活。伏地魔召集了食死徒并与哈利决斗，要把哈利杀死，但徒劳无功，哈利趁机溜走并带着塞德里克的尸体回到霍格沃茨。
+            </p><br>
+
+            <p>回到城堡之后，大家发现，穆迪教授原来是小巴蒂·克劳奇用复方汤剂变形的，而真正的穆迪教授被锁在了一个箱子里。原本被困在阿兹卡班的小巴蒂·克劳奇，成功把自己的母亲替代自己困在阿兹卡班病死，并控制了自己的父亲克劳奇先生，再以穆迪教授混进学校，他将哈利的名字放入了火焰杯，以便伏地魔能够顺利复活。但是在小佩蒂尔·克劳奇在将事实告诉魔法部长康奈利·福吉之前，他便被摄魂怪吸走了灵魂。加上记者把哈利抹黑的报道，福吉不相信伏地魔复活这一事实，于是魔法部开始与邓布利多对立，而邓布利多也重组凤凰社，对抗伏地魔。
+            </p><br>
+
+            <!-- 垫脚的 -->
+            <div style="width: 1100px;height: 100px;position: absolute;">
+
+            </div>
+        </div>
+        <!-- 情节跳转按钮 -->
+        <div>
+            <img src="../image/Hallows.png" alt="" id="plotbtn">
+            <p id="btnhint">查看情节</p>
+        </div>
+        <!-- 置于顶部便于跳转 -->
+        <div id="top" style="position: absolute; top: 0;left: 0;"></div>
+
+        <!-- 列表 -->
+        <div id="list">
+            <div id="movie-list">
+                <a href="./movie1.html" class="movie-name">
+                    哈利波特与魔法石
+                </a>
+                <a href="./movie2.html" class="movie-name">
+                    哈利波特与密室
+                </a>
+                <a href="./movie3.html" class="movie-name">
+                    哈利波特与阿兹卡班的囚徒
+                </a>
+                <a href="./movie4.html" class="movie-name">
+                    哈利波特与火焰杯
+                </a>
+                <a href="./movie5.html" class="movie-name">
+                    哈利波特与凤凰社
+                </a>
+                <a href="./movie6.html" class="movie-name">
+                    哈利波特与混血王子
+                </a>
+                <a href="./movie7.html" class="movie-name">
+                    哈利波特与死亡圣器（上）
+                </a>
+                <a href="./movie8.html" class="movie-name">
+                    哈利波特与死亡圣器（下）
+                </a>
+
+            </div>
+            <div><img src="../image/右拉.svg" alt="" id="arrow"></div>
+        </div>
+    </div>
+
+
+
+
+    <script src="../js/movie.js"></script>
+</body>
+
+</html>

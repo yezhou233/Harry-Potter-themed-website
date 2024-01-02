@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 字体 */
+@font-face {
+  font-family: 'yixing';
+  src: url('../font/壹星.ttf');
+}
+
+/* 主体背景 */
+body {
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#body {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: url('../image/hover.cur'), auto;
+  background-color: rgba(255, 255, 255, 0.18);
+}
+
+/* 登录块 */
+#login {
+  width: 300px;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+  right: 90px;
+  top: 300px;
+  text-align: center;
+  transition: all 1.2s;
+}
+
+/* 信息单 */
+#message-list {
+  list-style-type: none;
+}
+
+/* 头像图 */
+.avatar {
+  position: absolute;
+  width: 300px;
+  right: 90px;
+  top: 270px;
+  text-align: center;
+}
+
+.avatar img {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* 头像图跳动动画 */
+.avatar img:hover {
+  animation: jumpBoxHandler 1.5s infinite;
+}
+
+@keyframes jumpBoxHandler {
+
+  /* css事件 */
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, 10px);
+    /* 可配置跳动方向 */
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+/*  */
+
+
+/* 包含选项,选择框,输入框的容器 */
+.select-box {
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+/* 选项的容器 */
+.select-box .academy-options-container,
+.select-box .gender-options-container {
+  max-height: 0;
+  width: 100%;
+  transition: all 0.5s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+}
+
+/* 选择框和输入框 */
+.academy-selected,
+.gender-selected,
+#name {
+  text-align: center;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  position: relative;
+  order: 0;
+}
+
+/* 魔法棒图片 */
+.academy-selected img,
+.gender-selected img {
+  float: left;
+  position: absolute;
+  left: 60px;
+  top: 12px;
+}
+
+/* 选项 */
+.select-box .academy-option,
+.select-box .gender-option {
+  background-color: rgba(255, 255, 255, 0);
+  color: black;
+  margin-bottom: 7px;
+}
+
+/* 选项,选择框和输入框*/
+.select-box .academy-option,
+.select-box .gender-option,
+.academy-selected,
+.gender-selected,
+#name {
+  font-family: 'yixing';
+  font-size: 17px;
+  height: 50px;
+  width: 300px;
+  border: 0.5px black solid;
+  border-radius: 12px;
+  line-height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+}
+
+
+/* 各个学院选项的样式 */
+#gryffindor {
+  background-image: url("../image/格兰芬多.svg");
+  background-position-x: 15%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+#ravenclaw {
+  background-image: url("../image/拉文克劳.svg");
+  background-position-x: 15%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+#hufflepuff {
+  background-image: url("../image/赫奇帕奇.svg");
+  background-position-x: 17%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+#slytherin {
+  background-image: url("../image/斯莱特林.svg");
+  background-position-x: 17%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+}
+
+/*  */
+
+
+/* 各个学院选项鼠标事件 */
+#gryffindor:hover {
+  color: gold;
+}
+
+#gryffindor:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/格兰芬多底图.png");
+}
+
+#gryffindor:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+#ravenclaw:hover {
+  color: rgb(174, 174, 248);
+}
+
+#ravenclaw:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/拉文克劳底图.png");
+}
+
+#ravenclaw:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+#hufflepuff:hover {
+  color: rgb(255, 85, 3);
+}
+
+#hufflepuff:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/赫奇帕奇底图.png");
+}
+
+#hufflepuff:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+#slytherin:hover {
+  color: rgb(3, 215, 3);
+}
+
+#slytherin:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/斯莱特林底图.png");
+}
+
+#slytherin:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+/*  */
+
+
+/* 性别选项的样式 */
+#boy {
+  background-image: url("../image/magicboy.svg");
+  background-position-x: 15%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-size: 20%;
+}
+
+#girl {
+  background-image: url("../image/magicgirl.svg");
+  background-position-x: 15%;
+  background-position-y: 30%;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-size: 20%;
+}
+
+/*  */
+
+
+/* 性别选项鼠标事件 */
+#boy:hover {
+  color: white;
+}
+
+#boy:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/magicboy底图.jpg");
+  background-position-y: 50%;
+}
+
+#boy:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+#girl:hover {
+  color: white;
+}
+
+#girl:after {
+  width: 0;
+  height: 50px;
+  cursor: url('../image/hover.cur'), auto;
+  position: absolute;
+  content: "";
+  left: 0;
+  border-radius: 12px;
+  z-index: -1;
+  background-image: url("../image/magicgirl底图.jpg");
+  background-position-y: 55%;
+}
+
+#girl:hover:after {
+  height: 50px;
+  width: 300px;
+}
+
+/*  */
+
+
+/* 选择框下拉按钮的鼠标事件 */
+.academy-selected::after,
+.gender-selected::after {
+  content: "";
+  background: url("../image/下拉.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 30px;
+  right: 10px;
+  top: 8px;
+
+  transition: all 0.5s;
+}
+
+.select-box .academy-options-container.active,
+.select-box .gender-options-container.active {
+  max-height: 240px;
+  opacity: 1;
+}
+
+.select-box .academy-options-container.active+.academy-selected::after,
+.select-box .gender-options-container.active+.gender-selected::after {
+  transform: rotateX(180deg);
+  top: -8px;
+}
+
+
+.select-box label {
+  cursor: url('../image/hover.cur'), auto;
+}
+
+.select-box .academy-option .radio,
+.select-box .gender-option .radio {
+  display: none;
+}
+
+#loginbtn {
+  background: url("../image/城堡.svg");
+  background-size: 45%;
+  background-position-x: 100%;
+  background-position-y: 85%;
+  background-repeat: no-repeat;
+  font-family: 'yixing';
+  font-size: 20px;
+  height: 50px;
+  width: 160px;
+  border: 0.5px black solid;
+  border-radius: 8px;
+  line-height: 40px;
+  margin-top: 10px;
+  cursor: url('../image/hover2.cur'), auto;
+}
+
+/* 音乐播放盒子 */
+.music {
+  height: auto;
+  width: 400px;
+  position: absolute;
+  right: 30px;
+  bottom: 2%;
+}
+
+/* 唱片旋转动画 */
+#record {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  max-width: 55px;
+  animation: move 0s linear infinite;
+}
+
+@keyframes move {
+
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#music {
+  display: none;
+}
+
+#hint {
+  font-family: "yixing";
+  font-size: 18px;
+  color: rgb(93, 93, 93);
+  transition: all 0.3s;
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.music:hover #record {
+  animation: move 3s linear infinite;
+}
+
+.music:hover #hint {
+  display: block;
+}
+
+/* 信息错误盒子 */
+#error {
+  font-family: 'yixing';
+  font-size: 14px;
+  margin-top: 10px;
+}
