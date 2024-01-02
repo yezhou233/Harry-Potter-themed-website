@@ -27,7 +27,7 @@
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image006.jpg)
 
-进入第一个模块及“档案“页，右上方依然会显示用户的登记信息以及相应的头像，左上方导航栏可以点击控制浏览器的滚动条进度，使滚动条滑动到相应的位置，”返回“键可以点击返回主页面，右边唱片机图表可以点击播放背景音乐，唱片机会随着音乐播放而旋转。
+进入第一个模块及“档案”页，右上方依然会显示用户的登记信息以及相应的头像，左上方导航栏可以点击控制浏览器的滚动条进度，使滚动条滑动到相应的位置，”返回“键可以点击返回主页面，右边唱片机图表可以点击播放背景音乐，唱片机会随着音乐播放而旋转。
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image007.jpg)
 
@@ -39,19 +39,19 @@
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image009.jpg)
 
-进入第二个模块“小说“页面，中间部分的阅读器使用了开源的epub.js解析器解析上传的epub文件，左边的操作区可以点击切换小说的”下一页“和”上一页“，可以放大和缩小字体，增强阅读体验，并且支持下载原epub文件
+进入第二个模块及“小说”页面，中间部分的阅读器使用了开源的epub.js解析器解析上传的epub文件，左边的操作区可以点击切换小说的”下一页“和”上一页“，可以放大和缩小字体，增强阅读体验，并且支持下载原epub文件
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image010.jpg)
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image011.jpg)
 
-第三个模块“电影“页面，中间的播放器模块使用了开源的muiplayer播放器，上传的所有视频文件都经过了压缩处理。点击左方三角图标可以弹出播放列表，点击列表可以切换片源，同时当鼠标移入播放列表区域鼠标会更换为”金色飞贼“样式
+第三个模块及“电影”页面，中间的播放器模块使用了开源的muiplayer播放器，上传的所有视频文件都经过了压缩处理。点击左方三角图标可以弹出播放列表，点击列表可以切换片源，同时当鼠标移入播放列表区域鼠标会更换为”金色飞贼“样式
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image012.jpg)
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image013.jpg)
 
-点击右下角的三角形可以使浏览器滚动条滑动到下方剧情概览区域，再次点击可以滑动到播放器区域。
+点击右下角的三角形可以使浏览器滚动条滑动到下方剧情概览区域，再次点击可以滑动回播放器区域。
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image014.jpg)
 
