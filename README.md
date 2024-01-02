@@ -13,46 +13,46 @@
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image001.jpg)
 
-![](media/32dc3892deffa3e318a2679e6ddda28e.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image002.jpg)
 
 用户需要登记所有的信息才能进入主界面，根据用户选择的“学院”和“性别”的不同会显示不同的头像。当鼠标经过“log in“的按钮时鼠标会更换成”分院帽“样式。
 
-![](media/82711747eba309b62345c9acdcc964c7.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image003.jpg)
 
-![](media/122d7c8930155b7f266603bc769c6370.jpeg)
+![]https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image004.jpg)
 
 登录进主页面后，右上角会显示用户的登记信息以及相应的头像，中央的“分院帽致辞”会根据用户的“学院“显示对应的文字。
 
-![](media/30f1707fba41dfd018ecd4bd3a0b8d7a.png)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image005.jpg)
 
-![](media/fd0e2a652bae43b0564959336b49a302.png)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image006.jpg)
 
 进入第一个模块及“档案“页，右上方依然会显示用户的登记信息以及相应的头像，左上方导航栏可以点击控制浏览器的滚动条进度，使滚动条滑动到相应的位置，”返回“键可以点击返回主页面，右边唱片机图表可以点击播放背景音乐，唱片机会随着音乐播放而旋转。
 
-![](media/9bc6fa962578c8b2ef7ca44e9165c6a5.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image007.jpg)
 
 “校史“部分使用了时间轴。
 
-![](media/01006848c17452f8030b26396d85e8b0.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image008.jpg)
 
 “学院“部分使用手动的轮播图，点击下方圆点可以切换。
 
-![](media/bbee3ce01500d8406cfb8b86c33e0ca4.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image009.jpg)
 
 进入第二个模块“小说“页面，中间部分的阅读器使用了开源的epub.js解析器解析上传的epub文件，左边的操作区可以点击切换小说的”下一页“和”上一页“，可以放大和缩小字体，增强阅读体验，并且支持下载原epub文件
 
-![](media/462eb00864326c70333fb627d6e0b10f.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image010.jpg)
 
-![](media/9c4d1277927a40bb577daf288f7664da.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image011.jpg)
 
 第三个模块“电影“页面，中间的播放器模块使用了开源的muiplayer播放器，上传的所有视频文件都经过了压缩处理。点击左方三角图标可以弹出播放列表，点击列表可以切换片源，同时当鼠标移入播放列表区域鼠标会更换为”金色飞贼“样式
 
-![](media/fa32f67e60b34bad93eff9517d620286.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image012.jpg)
 
-![](media/6d154692fbba56b15bf4f650f28f561a.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image013.jpg)
 
 点击右下角的三角形可以使浏览器滚动条滑动到下方剧情概览区域，再次点击可以滑动到播放器区域。
 
-![](media/eab6fdb934878d148a7b42734e7a4eab.jpeg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image014.jpg)
 
 [查看作品](https://yezhou233.github.io/Harry-Potter-themed-website/html/)
