@@ -19,7 +19,7 @@
 
 ![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image003.jpg)
 
-![]https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image004.jpg)
+![](https://github.com/yezhou233/Harry-Potter-themed-website/blob/main/%E4%BD%9C%E5%93%81%E8%AF%B4%E6%98%8Eimg/image004.jpg)
 
 登录进主页面后，右上角会显示用户的登记信息以及相应的头像，中央的“分院帽致辞”会根据用户的“学院“显示对应的文字。
 
